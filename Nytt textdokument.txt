@@ -1,1 +1,7 @@
 easy_install pip
+
+cd C:\Users\max\Desktop\Youtubeify\flask\scripts
+activate
+cd \
+cd C:\Users\max\Desktop\Youtubeify\app
+python __init__.py
