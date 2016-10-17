@@ -1,3 +1,37 @@
-body{
-    background-color:blue;
+body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #FFF;
+        background-color: mediumslateblue;
+}
+
+h1, h3{
+        margin-left: 1%;
+}
+
+#searchbloc{
+        
+}
+
+textarea {
+        resize: none;
+        padding: 3px;
+        font-size: 20px;
+        margin-left: 1%;
+}
+
+#makesearch {
+        background-color: white;
+        font-size: 18px;
+        margin-left: 1%;
+        margin-top: 10px;
+        
+}
+
+.footerindex{
+        text-align: center;
+        clear: both;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
 }
