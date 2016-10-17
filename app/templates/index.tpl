@@ -7,16 +7,24 @@
         <script type="text/javascript" src="{{ url_for('static', filename='javascript.js') }}"></script>
     </head>
     <body>
+        <div id="searchbloc">
         <h1>YOUTUBEIFY</h1>
         
-        <div id="searchbloc">
-            <h3>Presenting the searchbox</h3>
+            
             <textarea id="search" name="title" placeholder="Search" maxlength="50" rows="1" cols="50"></textarea>
-            <hr>
+            
             <input id="makesearch" type="submit" value="Search for song">
         
         </div>
-        
+        <div id="container">
+            <div id="tubediv">
+                <h3>YouTube search results</h3>
+            </div>
+
+            <div id="spotdiv">
+                <h3>Spotify search results</h3>
+            </div>
+        </div>
        
         <footer class="footerindex">
                 <p>Youtubeify</p>
