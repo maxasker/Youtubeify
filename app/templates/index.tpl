@@ -19,16 +19,42 @@
         <div id="container">
             <div id="tubediv">
                 <h3>YouTube search results</h3>
+                
+                <div class="tubepresent">
+                    <p class="tubetext"> "Song name" performed by "Artist" live 2016</p>
+                    <img class="video" src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" alt="Youtubevideo"/>
+                </div>
+                
+                <div class="tubepresent">
+                    <p class="tubetext"> "Song name" performed by "Artist" live 2015</p>
+                    <img class="video" src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" alt="Youtubevideo"/>
+                </div>
+                <div class="tubepresent">
+                    <p class="tubetext"> "Song name" performed by "Artist" live 2015</p>
+                    <img class="video" src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" alt="Youtubevideo"/>
+                </div>
+                <div class="tubepresent">
+                    <p class="tubetext"> "Song name" performed by "Artist" live 2015</p>
+                    <img class="video" src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" alt="Youtubevideo"/>
+                </div>
             </div>
 
             <div id="spotdiv">
                 <h3>Spotify search results</h3>
+                
+                <div class="spotpresent">
+                    <p class="spottext"> "Song name" performed by "Artist" Spotify</p>
+                </div>
+                
+                <div class="spotpresent">
+                    <p class="spottext"> "Song name" performed by "Artist" Spotify</p>
+                </div>
             </div>
         </div>
        
         <footer class="footerindex">
-                <p>Youtubeify</p>
-                <p>Created by Max, Jacob and Per</p>
+                <p id="footertext">Youtubeify</p>
+                <p id="footertext2">Created by Max, Jacob and Per</p>
         </footer>
     </body>
 </html>

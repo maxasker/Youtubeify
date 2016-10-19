@@ -2,11 +2,15 @@ body {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 14px;
         color: #FFF;
-        background-color: mediumslateblue;
+        background-color: #5F626C;
+        
+}
+
+p{
+    margin: 0px;
 }
 
 h1, h3{
-        margin-left: 1%;
         text-align: center;
 }
 
@@ -38,17 +42,18 @@ textarea {
 }
 
 #container{
-        width: auto;
+        width: 100%;
         height: 100%;
         display: block;
+        float: left;
         
 }
 
 #tubediv{
-        margin-left: 8%;
+        margin-left: 7%;
         float: left;
         width: 40%;
-        height: 450px; 
+        height: auto; 
         background-color: lightcoral;
 }
 
@@ -56,13 +61,55 @@ textarea {
         margin-left: 50px;
         float: left;
         width: 40%;
-        height: 450px;
-        background-color: greenyellow;
+        height: auto;
+        background-color: limegreen;     
 }
+
+.spotpresent{
+        background-color: black;
+        padding: 1%;
+        height: auto;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-bottom: 8px;
+}
+
+.spottext{
+        padding: 1%;
+        height: 20px;
+        margin-left: 1px;
+        margin-right: 1px;
+}
+
+.tubepresent {
+        background-color: black;
+        padding: 1%;
+        height: auto;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-bottom: 8px;
+}
+
+.tubetext{
+        padding: 1%;
+        max-width: 90%;
+}
+
+.video{
+        
+        max-height: 200px;
+        max-width: 250px;
+}
+
+#footertext, #footertext2{
+        margin: 0px;
+}
+
 .footerindex{
         text-align: center;
         clear: both;
-        position: absolute;
+        padding-top: 25px;
         bottom: 0;
         width: 100%;
+        
 }
