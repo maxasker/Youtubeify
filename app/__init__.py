@@ -16,9 +16,6 @@ def youtubesearch(youtubelist, searchterm):
                         youtubelist.append("https://www.youtube.com/embed/"+(wut))
     return youtubelist
 
-def spotifysearch():
-    
-
 @app.route('/')
 def index():
     placeholder="Enter searchterm here"
