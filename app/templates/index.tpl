@@ -11,15 +11,20 @@
         <h1>YOUTUBEIFY</h1>
             
             <form action="/searchresult" method="post">
-                <textarea id="search" name="searchterm" placeholder="{{ placeholder }}" maxlength="50" rows="1" cols="50"></textarea>
-                <input id="searchterm" type="submit" value="Search for song">
+                <textarea id="search" name="searchterm" onkeydown="return limitLines(this, event)" placeholder="{{ placeholder }}" maxlength="50" rows="1" cols="40"></textarea>
+                <input id="searchterm" type="submit" value="Search">
             </form>
+            
+            <form action= ARTIST? method="post">
+                <textarea id="searchartist" name="searchterm" onkeydown="return limitLines(this, event)" placeholder="{{ placeholder }}" maxlength="50" rows="1" cols="40"></textarea>
+            </form>
+            
         </div>
         <div id="container">
             <div id="tubediv">
                 <h3>YouTube search results</h3>
                 {% for item in youtubelist %}
-                    <iframe id="tubepresent" type="text/html" width="640" height="390" src="{{ item }}" frameborder="0"></iframe>
+                    <iframe id="tubepresent" type="text/html" src="{{ item }}" frameborder="0"></iframe>
                 {%- endfor %}
                 
             </div>
