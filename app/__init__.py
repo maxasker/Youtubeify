@@ -4,8 +4,8 @@ import json
 
 app = Flask(__name__)
 
-def youtubesearch(youtubelist, searchterm):
-    yturl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q={0}&key=AIzaSyAxl8KldWxy7VdkaTIE1FeCJAcNFk7ketw".format(searchterm)
+def youtubesearch(youtubelist, ytsearch):
+    yturl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q={0}&key=AIzaSyAxl8KldWxy7VdkaTIE1FeCJAcNFk7ketw".format(ytsearch)
     response = requests.get(yturl)
     jdata = response.json()
     for diction in jdata['items']:
@@ -23,9 +23,18 @@ def index():
 
 @app.route('/searchresult', methods=['GET', 'POST'])
 def searchresult():
-    searchterm = request.form['searchterm']
+    artist = request.form['searchartist']
+    track = request.form['searchtrack']
+    if artist or track is not None:
+        ytsearch = artist + " - " + track
+    elif artist is None:
+        ytsearch = track
+    elif track is None:
+        ytsearch = artist
+    else:
+        return render_template("index.tpl")
     youtubelist = []
-    youtubesearch(youtubelist, searchterm)
+    youtubesearch(youtubelist, ytsearch)
     return render_template("index.tpl", youtubelist=youtubelist)
 
 if __name__ == "__main__":
