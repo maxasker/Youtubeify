@@ -68,7 +68,7 @@ h1, h3{
         float: left;
         width: 40%;
         height: auto;
-        max-height: 750px;
+        max-height: 450px;
         overflow-y: scroll;
         background-color: lightcoral;
 }
@@ -102,12 +102,11 @@ h1, h3{
 #tubepresent {
         background-color: black;
         padding: 1%;
-        height: auto;
         margin-left: 6px;
         margin-right: 1px;
         margin-bottom: 8px;
-        height: 270px;
-        width: 480px;
+        height: 70px;
+        width: 465px;
 }
 
 #footertext, #footertext2{
@@ -117,8 +116,8 @@ h1, h3{
 .footerindex{
         text-align: center;
         clear: both;
-        padding-top: 25px;
+        padding-top: 15px;
         bottom: 0;
-        width: 100%;
+        width: 99%;
         position: absolute;
 }
