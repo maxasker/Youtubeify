@@ -12,8 +12,8 @@
             
             <form action="/searchresult" method="post">
                 <textarea id="search" name="searchartist" onkeydown="return limitLines(this, event)" placeholder="Artist" maxlength="50" rows="1" cols="40"></textarea>
-                <textarea id="searchartist" name="searchtrack" onkeydown="return limitLines(this, event)" placeholder="Song" maxlength="50" rows="1" cols="40"></textarea>
                 <input id="searchterm" type="submit" value="Search">
+                <textarea id="searchartist" name="searchtrack" onkeydown="return limitLines(this, event)" placeholder="Song" maxlength="50" rows="1" cols="40"></textarea>
             </form>
             
         </div>
