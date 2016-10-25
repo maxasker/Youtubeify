@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\Dator\Documents\Youtubeify\flask"
+set "VIRTUAL_ENV=C:\Users\max\Desktop\Youtubeify\flask"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"

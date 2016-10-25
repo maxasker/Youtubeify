@@ -9,34 +9,19 @@
     <body>
         <div id="searchbloc">
         <h1>YOUTUBEIFY</h1>
-        
             
-            <textarea id="search" name="title" placeholder="Search" maxlength="50" rows="1" cols="50"></textarea>
-            
-            <input id="makesearch" type="submit" value="Search for song">
-        
+            <form action="/searchresult" method="post">
+                <textarea id="search" name="searchterm" placeholder="{{ placeholder }}" maxlength="50" rows="1" cols="50"></textarea>
+                <input id="searchterm" type="submit" value="Search for song">
+            </form>
         </div>
         <div id="container">
             <div id="tubediv">
                 <h3>YouTube search results</h3>
+                {% for item in youtubelist %}
+                    <iframe id="tubepresent" type="text/html" width="640" height="390" src="{{ item }}" frameborder="0"></iframe>
+                {%- endfor %}
                 
-                <div class="tubepresent">
-                    <p class="tubetext"> "Song name" performed by "Artist" live 2016</p>
-                    <img class="video" src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" alt="Youtubevideo"/>
-                </div>
-                
-                <div class="tubepresent">
-                    <p class="tubetext"> "Song name" performed by "Artist" live 2015</p>
-                    <img class="video" src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" alt="Youtubevideo"/>
-                </div>
-                <div class="tubepresent">
-                    <p class="tubetext"> "Song name" performed by "Artist" live 2015</p>
-                    <img class="video" src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" alt="Youtubevideo"/>
-                </div>
-                <div class="tubepresent">
-                    <p class="tubetext"> "Song name" performed by "Artist" live 2015</p>
-                    <img class="video" src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" alt="Youtubevideo"/>
-                </div>
             </div>
 
             <div id="spotdiv">

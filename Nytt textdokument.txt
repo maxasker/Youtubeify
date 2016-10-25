@@ -5,3 +5,12 @@ activate
 cd \
 cd C:\Users\max\Desktop\Youtubeify\app
 python __init__.py
+
+enctype="multipart/form-data" 
+
+Youtube api:
+
+Spotify api Client ID: 4ca8e5dbdef942149261c48b8fd252ff
+	    Client secret: 5decc23b3ddc4160a786ad2643315434
+
+SPotify api sök: https://api.spotify.com/v1/search/q=roadhouse%20blues
