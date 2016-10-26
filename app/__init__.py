@@ -17,16 +17,16 @@ def youtubesearch(youtubelist,ytsearch):
     return youtubelist
 
 def spotifysearch(spotifylist,artist,track,spotifystate):
-    artist = artist.replace(" ", "+")
-    track = track.replace(" ", "+")
+    artist = artist.replace(" ", "%20")
+    track = track.replace(" ", "%20")
     if spotifystate == "artisttrack":
-        spotifyurl = "https://api.spotify.com/v1/search?q={0}&artist:{1}&type=track&limit=25".format(track, artist)
+        spotifyurl = "https://api.spotify.com/v1/search?q={0}&artist:{1}&type=track&limit=25".format(track.replace(" ", "%20"), artist.replace(" ", "%20"))
         response = requests.get(spotifyurl)
         jdata = response.json()
         for diction in jdata['tracks']['items']:
             spotifylist.append(diction['uri'])
     elif spotifystate == "track":
-        spotifyurl = "https://api.spotify.com/v1/search?q=name:{0}&type=track&limit=25".format(track)
+        spotifyurl = "https://api.spotify.com/v1/search?q=name:{0}&type=track&limit=25".format(track.replace(" ", "%20"))
         response = requests.get(spotifyurl)
         jdata = response.json()
         for diction in jdata['tracks']['items']:
