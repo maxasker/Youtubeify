@@ -78,19 +78,11 @@ h1, h3{
         float: left;
         width: 40%;
         height: auto;
-        max-height: 750px;
+        max-height: 450px;
         overflow-y: scroll;
         background-color: limegreen;     
 }
 
-.spotpresent{
-        background-color: black;
-        padding: 1%;
-        height: auto;
-        margin-left: 1px;
-        margin-right: 1px;
-        margin-bottom: 8px;
-}
 
 .spottext{
         padding: 1%;
@@ -104,9 +96,14 @@ h1, h3{
         padding: 1%;
         margin-left: 6px;
         margin-right: 1px;
-        margin-bottom: 8px;
+        margin-bottom: 3px;
         height: 70px;
         width: 465px;
+}
+
+#spotpresent{
+        margin-left: 25px;
+        height: 80px;
 }
 
 #footertext, #footertext2{

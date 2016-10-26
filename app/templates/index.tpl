@@ -18,6 +18,7 @@
             
         </div>
         <div id="container">
+            
             <div id="tubediv">
                 <h3>YouTube search results</h3>
                 {%if not youtubelist %}
@@ -33,17 +34,17 @@
 
             <div id="spotdiv">
                 <h3>Spotify search results</h3>
-                <div class="spotpresent">
+                
                 {%if not spotifylist %}
                     <p>förstasidan</p>
                 {%elif spotifylist == "empty"%}
                     <p>Sorry, nothing here :(</p>
                 {%else%}
                 {% for item in spotifylist %}
-                    <iframe src="https://embed.spotify.com/?uri={{ item }}" frameborder="0"></iframe>
+                    <iframe id="spotpresent" src="https://embed.spotify.com/?uri={{ item }}"  width="450" height="80"frameborder="0"></iframe>
                 {%- endfor %}
                 {% endif %}
-                </div>
+                
             </div>
         </div>
        
