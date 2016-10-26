@@ -1,20 +1,18 @@
 body {
+/*Ger font-style, textstorlek, textfärg och bakgrundsfärg på hela sidan*/
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 14px;
         color: #FFF;
         background-color: #5F626C;
-        
-}
-
-p{
-    margin: 0px;
 }
 
 h1, h3{
+/*Ser till så att våra H-taggar läggs centrerat*/
         text-align: center;
 }
 
-#search {
+#searchartist {
+/*Stylar våran text-ruta för sökning på Artist*/
         resize: none;
         padding: 3px;
         font-size: 20px;
@@ -25,16 +23,21 @@ h1, h3{
         box-shadow:0px 2px 3px #000000;
 }
 
-#searchartist{
+#search{
+/*Stylar våran text-ruta för sökning på Låt*/
         margin-top: -20px;
         resize: none;
         padding: 3px;
         font-size: 20px;
         float: left;
         margin-left: 20%;
+        border-radius: 2px;
+        border: none;
+        box-shadow:0px 2px 3px #000000;
 }
 
 #searchbloc{
+/*Stylar våran div som h1-titeln, sökrutorna och sökknappen ligger i*/
         width: 100%;
         float: left;
         margin-bottom: 2%;
@@ -42,6 +45,7 @@ h1, h3{
 }
 
 #searchterm {
+/*Ger styling till våran sökknapp*/
         background-color: white;
         font-size: 42px;
         margin-left: 6%;
@@ -54,11 +58,13 @@ h1, h3{
 }
 
 #searchterm:hover{
+/*Gör så att sökknappen ändrar färg när man håller musen över*/
         text-decoration: none;
         background-color: lightgrey;
 }
 
 #container{
+/*Behållare för rutorna som presenterar resultatet*/
         width: 100%;
         height: auto;
         display: block;
@@ -67,6 +73,7 @@ h1, h3{
 }
 
 #tubediv{
+/*Div för våran ruta som presenterar Youtube resultaten*/
         margin-left: 7%;
         float: left;
         width: 40%;
@@ -80,6 +87,7 @@ h1, h3{
 }
 
 #spotdiv{
+/*Div för våran ruta som presenterar Spotify resultaten*/
         margin-left: 50px;
         float: left;
         width: 40%;
@@ -95,6 +103,7 @@ h1, h3{
 
 
 #tubepresent {
+/*Styling för varje enskilda Youtube-reslutat. Spelaren kommer från Youtube men adderat styling för att passa in*/
         background-color: black;
         padding: 1%;
         margin-left: 6px;
@@ -105,14 +114,29 @@ h1, h3{
 }
 
 #spotpresent{
+/*Styling för varje enskilda Spotify-reslutat. Spelaren är hämtat från Spotifys widgetar*/
         margin-left: 25px;
 }
 
+.errormessage{
+/*Styling för meddelande om inga sökalternativ finns*/
+        padding: 1%;
+        margin-left: 6px;
+}
+
+.welcomemessage{
+/*Styling för meddelande på första sidan innan sökning*/
+        padding: 1%;
+        margin-left: 6px;
+}
+
 #footertext, #footertext2{
+/*Text styling på footern*/
         margin: 0px;
 }
 
 .footerindex{
+/*Styling på footern*/
         text-align: center;
         clear: both;
         padding-top: 15px;
