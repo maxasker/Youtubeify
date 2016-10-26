@@ -63,9 +63,12 @@ def search(artist,track):
     elif artist == "none":
         ytsearch = track
         spotifystate = "track"
-    else:
+    elif track == "none":
         ytsearch = artist
         spotifystate = "artist"
+    else:
+        ytsearch = (artist + track).replace(" ", "+")
+        spotifystate = "artisttrack"
     spotifylist = []
     youtubelist = []
     spotifysearch(spotifylist,artist,track,spotifystate)
