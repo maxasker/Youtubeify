@@ -8,18 +8,18 @@
     </head>
     <body>
         <div id="searchbloc">
+<!--Div för översta delen av sidan. Innehåller sidtitel, sökrutorna och sökknappen-->
         <h1>YOUTUBEIFY</h1>
-            
             <form action="/searchresult" method="post">
                 <textarea id="searchartist" name="searchartist" onkeydown="return limitLines(this, event)" placeholder="Type in Artist" maxlength="50" rows="1" cols="40"></textarea>
                 <input id="searchterm" type="submit" value="Search">
                 <textarea id="search" name="searchtrack" onkeydown="return limitLines(this, event)" placeholder="Type in Song" maxlength="50" rows="1" cols="40"></textarea>
             </form>
-            
         </div>
         <div id="container">
-            
+<!--Div för rutorna som presenterar resultaten-->    
             <div id="tubediv">
+            <!--Div som presenterar Youtube-resultaten-->
                 <h3>YouTube search results</h3>
                 {%if not youtubelist %}
                     <p class="welcomemessage">Please search for an artist, a song or both</p>
@@ -31,10 +31,9 @@
                 {%- endfor %}
                 {% endif %}
             </div>
-
             <div id="spotdiv">
+            <!--Div som presenterar Spotify-resultaten-->
                 <h3>Spotify search results</h3>
-                
                 {%if not spotifylist %}
                     <p class="welcomemessage">Results are presented from both YouTube and Spotify</p>
                 {%elif spotifylist == "empty"%}
@@ -44,11 +43,10 @@
                     <iframe id="spotpresent" src="https://embed.spotify.com/?uri={{ item }}"  width="450" height="80"frameborder="0"></iframe>
                 {%- endfor %}
                 {% endif %}
-                
             </div>
         </div>
-       
         <footer class="footerindex">
+        <!--Footern-->
                 <p id="footertext">Youtubeify</p>
                 <p id="footertext2">Created by Max, Jacob and Per</p>
         </footer>
