@@ -1,0 +1,50 @@
+Vi har två api-lösningar, pga att vårat api inte behöver någon statisk databas så har vi en lösning
+som visar att vi skulle kunna.
+
+FÖR WINDOWS
+Krav:
+Python 3.5 (klicka i pythonpath i installationen)
+
+För mashuptjänsten(youtubeify):
+$ pip install virtualenv
+I CMD lokalisera youtubeifymappen.
+$ virtualenv flask
+$ cd flask/scripts
+$ pip install flask
+$ activate
+$ cd youtubeify/app		(cd .. för att backa)
+$ pip install requests
+$ python __init__.py
+
+localhost:5000 i webbläsaren
+
+För Apitjänsten utan databas(youtubeifyapi):
+
+$ pip install flask-restful
+$ pip install requests
+$ virtualenv rest-api
+$ cd rest-api/scripts/activate
+$ cd /app (ligger i scripts)
+$ python app.py
+
+localhost:5000/- i webbläsaren
+
+För Apitjänsten med databas(youtubeifyapidb):
+
+$ pip install requests
+$ virtualenv rest-api
+
+Ladda ner sqlite https://sqlite.org/download.html
+Se till så att sqlite3 finns i path för cmd. (för windows högerklicka på den här datorn, egenskaper, avancerade systeminställningar, miljövariabler, path, redigera, redigera text, lägg till ;C:\sqlite som exempel)
+$ cd rest-app
+$ sqlite3 youtubeify.db
+$ CREATE TABLE YOUTUBELINKS(YTLINK VARCHAR(100));
+$ CREATE TABLE SPOTIFYTRACK(TRACK VARCHAR(100));
+$ CREATE TABLE SPOTIFYARTIST(ARTIST VARCHAR(100));
+
+öppna ny cmd
+$ pip install sqlalchemy
+$ cd rest-api/scripts/activate
+$ cd rest-app
+$ cd /rest-app (ligger i scripts)
+$ python app.py
